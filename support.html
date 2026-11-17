@@ -1,72 +1,105 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Support · NOMAD: Silk Road Empire</title>
   <meta name="description" content="Help and contact for NOMAD: Silk Road Empire.">
   <meta name="theme-color" content="#120c08">
   <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/icon-180.png">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
 </head>
 <body>
 
-<header class="top scrolled">
+<header class="top" id="top">
   <a class="mark" href="./"><img src="img/icon-180.png" alt=""><span>NOMAD</span></a>
   <nav><a href="./">Home</a><a class="chip" href="privacy.html">Privacy</a></nav>
 </header>
 
-<main class="page">
+<section class="page-hero">
+  <div class="bg" aria-hidden="true" style="background-image:url('img/first_camp.jpg')"></div>
   <div class="wrap">
-    <div class="frame">
-    <img class="portrait" src="img/art/advisor_trade.webp" alt="">
-    <span class="eyebrow">We're here to help</span>
-    <h1>Support</h1>
-    <p>Found a bug, stuck on a scenario, or have an idea for the game? Write to us. We read every message.</p>
-    <a class="mail" href="mailto:hello@nomadgame.co.uk?subject=NOMAD%20support">hello@nomadgame.co.uk</a>
-    <p class="updated">If you can, tell us your device, your iOS version and what you were doing when it happened. A screenshot helps a lot.</p>
+    <img class="portrait reveal" src="img/art/advisor_trade.webp" alt="Caravan master Yusuf">
+    <span class="eyebrow reveal">We're here to help</span>
+    <h1 class="reveal">Support</h1>
+    <p class="lead reveal">Found a bug, stuck on a scenario, or have an idea for the game? Every letter is read and answered.</p>
+  </div>
+</section>
 
-    <h2>Common questions</h2>
+<main class="page">
+  <div class="wrap" style="max-width: 980px">
 
-    <details>
-      <summary>Nobody moves into my homes</summary>
-      <p>Every home needs a road along one of its sides, and that road must join the Silk Road, where settlers arrive. A second row of homes can be reached through the row in front, but a third row gets nobody. The build preview shows amber tiles where no road reaches.</p>
-    </details>
-
-    <details>
-      <summary>My homes go up a level, then drop back</summary>
-      <p>Each level needs its services to keep coming: water, food from a market, a shrine's visits and more. Tap a home to see what it needs to rise and what it is short of. The overlays button shows at a glance which streets lack water, food or faith.</p>
-    </details>
-
-    <details>
-      <summary>A building says it has no workers</summary>
-      <p>Nine in twenty of your people can work. When jobs outnumber workers, the last buildings in line stay empty. Build more homes, or open the Work advisor and close a less important building or give one priority.</p>
-    </details>
-
-    <details>
-      <summary>Where is my city saved? Can I move it to a new phone?</summary>
-      <p>Your cities save themselves on your device every 30 seconds and whenever you leave the game. They move to a new phone with an iCloud or computer backup of your device. There are no online accounts.</p>
-    </details>
-
-    <details>
-      <summary>How do I change the language, music or sound?</summary>
-      <p>Tap the gold gear on the main menu. The game speaks English, Русский, Türkçe, Deutsch, Français and Español, and starts in your phone's language if it can.</p>
-    </details>
-
-    <details>
-      <summary>How do I start over?</summary>
-      <p>In a city, open the menu at the top right and choose New city (in The Endless Steppe) or Restart (in a scenario).</p>
-    </details>
+    <div class="contact frame reveal">
+      <img class="seal" src="img/art/icon_seal.webp" alt="">
+      <div>
+        <h2>Write to us</h2>
+        <p>Send a message by caravan, or by email, which is faster.</p>
+        <a class="mail" href="mailto:hello@nomadgame.co.uk?subject=NOMAD%20support">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.2 7H4v.6l8 5.4 8-5.4V7h-.2L12 12.2z"/></svg>
+          hello@nomadgame.co.uk
+        </a>
+        <div class="tips">
+          <span>Your iPhone or iPad model</span>
+          <span>Your iOS version</span>
+          <span>What you were doing</span>
+          <span>A screenshot helps</span>
+        </div>
+      </div>
     </div>
+
+    <div class="faq-head">
+      <div class="ornament reveal"><i></i></div>
+      <span class="eyebrow reveal">Common questions</span>
+      <h2 class="reveal">Answers from the council</h2>
+    </div>
+
+    <div class="faq">
+      <details class="reveal d1">
+        <summary><img src="img/art/icon_road.webp" alt=""><span>Nobody moves into my homes</span></summary>
+        <p>Every home needs a road along one of its sides, and that road must join the Silk Road, where settlers arrive. A second row of homes can be reached through the row in front, but a third row gets nobody. The build preview shows amber tiles where no road reaches.</p>
+      </details>
+      <details class="reveal d2">
+        <summary><img src="img/art/icon_housing.webp" alt=""><span>My homes rise a level, then drop back</span></summary>
+        <p>Each level needs its services to keep coming: water, food from a market, a shrine's visits and more. Tap a home to see what it needs to rise and what it is short of. The overlays button shows at a glance which streets lack water, food or faith.</p>
+      </details>
+      <details class="reveal d1">
+        <summary><img src="img/art/icon_alert_workers.webp" alt=""><span>A building says it has no workers</span></summary>
+        <p>Nine in twenty of your people can work. When jobs outnumber workers, the last buildings in line stay empty. Build more homes, or open the Work advisor and close a less important building or give one priority.</p>
+      </details>
+      <details class="reveal d2">
+        <summary><img src="img/art/icon_ov_water.webp" alt=""><span>My fountain or bathhouse is dry</span></summary>
+        <p>Fountains and bathhouses need piped water. Build a reservoir touching a lake or river, then chain more reservoirs inland. The Pipes overlay shows every tile the pipes reach.</p>
+      </details>
+      <details class="reveal d1">
+        <summary><img src="img/art/icon_crown.webp" alt=""><span>The Great Khan is angry with me</span></summary>
+        <p>Open the Khan advisor to see what he asks for and how long you have. Your stores hold his share back for you; send it before the time runs out. A gift from your own purse also softens him.</p>
+      </details>
+      <details class="reveal d2">
+        <summary><img src="img/art/icon_scroll.webp" alt=""><span>Where is my city saved? Can I move it?</span></summary>
+        <p>Your cities save themselves on your device every 30 seconds and whenever you leave the game. They move to a new phone with an iCloud or computer backup of your device. There are no online accounts.</p>
+      </details>
+      <details class="reveal d1">
+        <summary><img src="img/art/icon_advisors.webp" alt=""><span>How do I change the language or sound?</span></summary>
+        <p>Tap the gold gear on the main menu. The game speaks English, Русский, Türkçe, Deutsch, Français and Español, and starts in your phone's language if it can.</p>
+      </details>
+      <details class="reveal d2">
+        <summary><img src="img/art/icon_turn.webp" alt=""><span>How do I start over?</span></summary>
+        <p>In a city, open the menu at the top right and choose New city (in The Endless Steppe) or Restart (in a scenario).</p>
+      </details>
+    </div>
+
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <nav><a href="./">Home</a><a href="privacy.html">Privacy</a></nav>
+    <nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="mailto:hello@nomadgame.co.uk">hello@nomadgame.co.uk</a></nav>
     <span>© 2026 NOMAD: Silk Road Empire</span>
   </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>
