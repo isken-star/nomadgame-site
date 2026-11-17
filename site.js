@@ -5,6 +5,13 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // The language picker closes on a tap anywhere else, or on Escape.
+  var picker = document.querySelector('details.lang');
+  if (picker) {
+    document.addEventListener('click', function (e) { if (picker.open && !picker.contains(e.target)) picker.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') picker.open = false; });
+  }
+
   var items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('in'); });
