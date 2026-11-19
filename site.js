@@ -41,3 +41,20 @@
     if (s) spy.observe(s);
   });
 })();
+
+// The App Store link. Until version 1.0 is released Apple's link shows "not available",
+// so the buttons keep saying "Coming soon". On launch day set live to true (or preview a
+// page with ?store=live): every download button then links to the App Store in the
+// visitor's own country, and the closing line says the game is out.
+(function () {
+  var STORE = { live: false, url: 'https://apps.apple.com/app/id6832766971' };
+  if (!STORE.live && !/[?&]store=live\b/.test(location.search)) return;
+  document.querySelectorAll('[data-store]').forEach(function (a) {
+    a.href = STORE.url;
+    var label = a.querySelector('[data-store-text]');
+    if (label) label.textContent = a.getAttribute('data-live-text');
+  });
+  document.querySelectorAll('[data-store-line]').forEach(function (p) {
+    p.textContent = p.getAttribute('data-store-line');
+  });
+})();
