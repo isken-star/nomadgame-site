@@ -58,3 +58,23 @@
     p.textContent = p.getAttribute('data-store-line');
   });
 })();
+
+// Leave out your own visits: open any page with #notrack once on a device (and #track to
+// count them again). Fathom remembers it in this browser's storage. site.js runs before
+// Fathom's deferred script, so even that first visit isn't counted.
+(function () {
+  var flag = location.hash === '#notrack' ? 'true' : location.hash === '#track' ? 'false' : null;
+  if (!flag) return;
+  try { localStorage.setItem('blockFathomTracking', flag); } catch (e) { return; }
+  if (window.fathom) { flag === 'true' ? fathom.blockTrackingForMe() : fathom.enableTrackingForMe(); }
+  var note = document.createElement('div');
+  note.textContent = flag === 'true' ? 'Your visits on this browser are no longer counted.'
+                                     : 'Your visits on this browser are counted again.';
+  note.setAttribute('role', 'status');
+  note.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:99;' +
+    'background:#2a1d14;color:#f3e3c3;border:1px solid #c9a35a;border-radius:10px;padding:10px 16px;' +
+    'font:15px/1.4 system-ui,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.35)';
+  document.body.appendChild(note);
+  setTimeout(function () { note.remove(); }, 4000);
+  history.replaceState(null, '', location.pathname + location.search);
+})();
