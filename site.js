@@ -47,7 +47,7 @@
 // page with ?store=live): every download button then links to the App Store in the
 // visitor's own country, and the closing line says the game is out.
 (function () {
-  var STORE = { live: false, url: 'https://apps.apple.com/app/id6832766971' };
+  var STORE = { live: true, url: 'https://apps.apple.com/app/id6832766971' };
   if (!STORE.live && !/[?&]store=live\b/.test(location.search)) return;
   document.querySelectorAll('[data-store]').forEach(function (a) {
     a.href = STORE.url;
